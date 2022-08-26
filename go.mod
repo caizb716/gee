@@ -1,3 +1,3 @@
-module github.com/czbQaQ/gee
+module github.com/caizb716/gee
 
 go 1.19
