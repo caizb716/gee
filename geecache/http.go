@@ -2,7 +2,7 @@ package geecache
 
 import (
 	"fmt"
-	"github.com/czbQaQ/gee/geecache/consistenthash"
+	"github.com/caizb716/gee/geecache/consistenthash"
 	"io/ioutil"
 	"log"
 	"net/http"

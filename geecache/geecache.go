@@ -2,7 +2,7 @@ package geecache
 
 import (
 	"fmt"
-	"github.com/czbQaQ/gee/geecache/singleflight"
+	"github.com/caizb716/gee/geecache/singleflight"
 	"log"
 	"sync"
 )

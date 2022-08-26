@@ -2,8 +2,8 @@ package geeorm
 
 import (
 	"database/sql"
-	"gee/geeorm/log"
-	"github.com/czbQaQ/gee/geeorm/session"
+	"github.com/caizb716/gee/geeorm/log"
+	"github.com/caizb716/gee/geeorm/session"
 )
 
 type Engine struct {
