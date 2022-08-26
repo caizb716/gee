@@ -3,7 +3,7 @@ package geeorm
 import (
 	"database/sql"
 	"gee/geeorm/log"
-	"gee/geeorm/session"
+	"github.com/czbQaQ/gee/geeorm/session"
 )
 
 type Engine struct {

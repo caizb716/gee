@@ -2,7 +2,7 @@ package session
 
 import (
 	"database/sql"
-	"gee/geeorm/log"
+	"github.com/czbQaQ/gee/geeorm/log"
 	"strings"
 )
 
