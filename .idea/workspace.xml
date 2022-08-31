@@ -4,23 +4,16 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cadb597f-815b-411b-b651-8d056fe8265c" name="Changes" comment="更改引用包路径">
-      <change afterPath="$PROJECT_DIR$/geeorm/clause/clause.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/geeorm/clause/clause_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/geeorm/clause/generator.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/geeorm/dialect/dialect.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/geeorm/dialect/sqlite3.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/geeorm/schema/schema.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/geeorm/schema/schema_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/geeorm/session/raw_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/geeorm/session/record.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/geeorm/session/record_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/geeorm/session/table.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/geeorm/session/table_test.go" afterDir="false" />
+    <list default="true" id="cadb597f-815b-411b-b651-8d056fe8265c" name="Changes" comment="前四天代码">
+      <change afterPath="$PROJECT_DIR$/geeorm/geeorm_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/geeorm/session/hooks.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/geeorm/session/hooks_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/geeorm/session/transaction.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/geeorm/gee.db" beforeDir="false" afterPath="$PROJECT_DIR$/geeorm/gee.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/geeorm/geegorm.go" beforeDir="false" afterPath="$PROJECT_DIR$/geeorm/geegorm.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/geeorm/session/raw.go" beforeDir="false" afterPath="$PROJECT_DIR$/geeorm/session/raw.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/geeorm/session/record.go" beforeDir="false" afterPath="$PROJECT_DIR$/geeorm/session/record.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +30,14 @@
   <component name="GOROOT" url="file:///usr/local/go" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="GoLibraries">
     <option name="indexEntireGoPath" value="false" />
@@ -62,7 +63,7 @@
     <property name="go.watchers.conflict.with.on.save.actions.check.performed" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="Go Test.TestSession_DeleteAndCount in github.com/caizb716/gee/geeorm/session">
+  <component name="RunManager" selected="Go Test.TestEngine_Migrate in github.com/caizb716/gee/geeorm">
     <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
       <module name="gee" />
       <working_directory value="$PROJECT_DIR$" />
@@ -70,6 +71,54 @@
       <package value="gee" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestEngine_Migrate in github.com/caizb716/gee/geeorm" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="gee" />
+      <working_directory value="$PROJECT_DIR$/geeorm" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="github.com/caizb716/gee/geeorm" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestEngine_Migrate\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestEngine_Transaction/commit in github.com/caizb716/gee/geeorm" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="gee" />
+      <working_directory value="$PROJECT_DIR$/geeorm" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="github.com/caizb716/gee/geeorm" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestEngine_Transaction\E$/^\Qcommit\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestEngine_Transaction/rollback in github.com/caizb716/gee/geeorm" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="gee" />
+      <working_directory value="$PROJECT_DIR$/geeorm" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="github.com/caizb716/gee/geeorm" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestEngine_Transaction\E$/^\Qrollback\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestSession_CallMethod in github.com/caizb716/gee/geeorm/session" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="gee" />
+      <working_directory value="$PROJECT_DIR$/geeorm/session" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="github.com/caizb716/gee/geeorm/session" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestSession_CallMethod\E$" />
       <method v="2" />
     </configuration>
     <configuration name="TestSession_DeleteAndCount in github.com/caizb716/gee/geeorm/session" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
@@ -84,54 +133,6 @@
       <pattern value="^\QTestSession_DeleteAndCount\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestSession_Exec in github.com/caizb716/gee/geeorm/session" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="gee" />
-      <working_directory value="$PROJECT_DIR$/geeorm/session" />
-      <root_directory value="$PROJECT_DIR$" />
-      <kind value="PACKAGE" />
-      <package value="github.com/caizb716/gee/geeorm/session" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <framework value="gotest" />
-      <pattern value="^\QTestSession_Exec\E$" />
-      <method v="2" />
-    </configuration>
-    <configuration name="TestSession_Find in github.com/caizb716/gee/geeorm/session" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="gee" />
-      <working_directory value="$PROJECT_DIR$/geeorm/session" />
-      <root_directory value="$PROJECT_DIR$" />
-      <kind value="PACKAGE" />
-      <package value="github.com/caizb716/gee/geeorm/session" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <framework value="gotest" />
-      <pattern value="^\QTestSession_Find\E$" />
-      <method v="2" />
-    </configuration>
-    <configuration name="TestSession_Insert in github.com/caizb716/gee/geeorm/session" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="gee" />
-      <working_directory value="$PROJECT_DIR$/geeorm/session" />
-      <root_directory value="$PROJECT_DIR$" />
-      <kind value="PACKAGE" />
-      <package value="github.com/caizb716/gee/geeorm/session" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <framework value="gotest" />
-      <pattern value="^\QTestSession_Insert\E$" />
-      <method v="2" />
-    </configuration>
-    <configuration name="TestSession_QueryRows in github.com/caizb716/gee/geeorm/session" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="gee" />
-      <working_directory value="$PROJECT_DIR$/geeorm/session" />
-      <root_directory value="$PROJECT_DIR$" />
-      <kind value="PACKAGE" />
-      <package value="github.com/caizb716/gee/geeorm/session" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <framework value="gotest" />
-      <pattern value="^\QTestSession_QueryRows\E$" />
-      <method v="2" />
-    </configuration>
     <configuration default="true" type="GoTestRunConfiguration" factoryName="Go Test">
       <module name="gee" />
       <working_directory value="$PROJECT_DIR$" />
@@ -144,11 +145,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Test.TestEngine_Migrate in github.com/caizb716/gee/geeorm" />
+        <item itemvalue="Go Test.TestEngine_Transaction/commit in github.com/caizb716/gee/geeorm" />
+        <item itemvalue="Go Test.TestEngine_Transaction/rollback in github.com/caizb716/gee/geeorm" />
+        <item itemvalue="Go Test.TestSession_CallMethod in github.com/caizb716/gee/geeorm/session" />
         <item itemvalue="Go Test.TestSession_DeleteAndCount in github.com/caizb716/gee/geeorm/session" />
-        <item itemvalue="Go Test.TestSession_Insert in github.com/caizb716/gee/geeorm/session" />
-        <item itemvalue="Go Test.TestSession_Find in github.com/caizb716/gee/geeorm/session" />
-        <item itemvalue="Go Test.TestSession_Exec in github.com/caizb716/gee/geeorm/session" />
-        <item itemvalue="Go Test.TestSession_QueryRows in github.com/caizb716/gee/geeorm/session" />
       </list>
     </recent_temporary>
   </component>
@@ -169,7 +170,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="更改引用包路径" />
-    <option name="LAST_COMMIT_MESSAGE" value="更改引用包路径" />
+    <MESSAGE value="前四天代码" />
+    <option name="LAST_COMMIT_MESSAGE" value="前四天代码" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
@@ -188,14 +190,9 @@
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/geeorm/session/record.go</url>
-          <line>17</line>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/geeorm/clause/generator.go</url>
-          <line>41</line>
-          <option name="timeStamp" value="13" />
+          <url>file://$PROJECT_DIR$/geeorm/geegorm.go</url>
+          <line>53</line>
+          <option name="timeStamp" value="14" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
